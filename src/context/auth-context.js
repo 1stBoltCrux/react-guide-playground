@@ -5,26 +5,22 @@ import React, { createContext, useContext, useState } from "react";
 const AuthContext = createContext(null);
 
 export const AuthProvider = (props) => {
-    const [loginStatus, setLoginStatus] = useState(false);
+	const [loginStatus, setLoginStatus] = useState(false);
 
-    const toggleLogin = () => {
-        setLoginStatus(!loginStatus);
-    }
+	const toggleLogin = () => {
+		setLoginStatus(!loginStatus);
+	};
 
 	const value = {
-        loginStatus,
-        toggleLogin
-    };
-    
+		loginStatus,
+		toggleLogin,
+	};
 
 	return (
-		<AuthContext.Provider value={value}>
-			{props.children}
-		</AuthContext.Provider>
+		<AuthContext.Provider value={value}>{props.children}</AuthContext.Provider>
 	);
 };
 
 export const useAuth = () => {
 	return useContext(AuthContext);
 };
-

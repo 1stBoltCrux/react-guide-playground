@@ -7,7 +7,7 @@ import { useAuth } from "../../context/auth-context";
 // if no props change the component will never update
 
 const cockpit = ({ click, login }) => {
-	const {toggleLogin} = useAuth();
+	const { toggleLogin } = useAuth();
 	// without any config, mimicks both componentDidMount and componentDidUpdate
 	// second argument is an array where you point at all the data that is used in your component
 	// so in essence selecting which prop (or state!) changes you'd like useEffect to respond to
