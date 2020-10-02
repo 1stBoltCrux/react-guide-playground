@@ -62,7 +62,9 @@ const app = (props) => {
   // old school inline styles
 
   return (
+
     <div className="App">
+      
       {/* since this is an event handler, we just want to
          pass a reference to the function, not call it! */}
       <AuthProvider>

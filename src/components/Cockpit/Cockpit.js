@@ -6,7 +6,7 @@ import { useAuth } from "../../context/auth-context";
 // this provides a built in check for changing props
 // if no props change the component will never update
 
-const cockpit = ({ click, login }) => {
+const cockpit = ({ click }) => {
 	const { toggleLogin } = useAuth();
 	// without any config, mimicks both componentDidMount and componentDidUpdate
 	// second argument is an array where you point at all the data that is used in your component
@@ -22,6 +22,7 @@ const cockpit = ({ click, login }) => {
 	}, []);
 	return (
 		<Fragment>
+			{console.log('rendering cockpit')}
 			<StyledButton
 				alt="true"
 				//some way we can pass an argument to the handler

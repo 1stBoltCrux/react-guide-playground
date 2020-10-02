@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Person from './Person/Person'
 // parens es6 notation, if it's one line you can omit the return statement
 const persons = ({click, change, persons}) =>
 	persons.map(({ name, age, id }, i) => {
+
 		return (
 			<Person
 				key={i}
